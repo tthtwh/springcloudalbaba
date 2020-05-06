@@ -14,7 +14,8 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modules>
-
+        <module>../cloudalibaba9001</module>
+        <module>../cloud-alibaba9002</module>
     </modules>
 
     <properties>
