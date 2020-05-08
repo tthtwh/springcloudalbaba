@@ -20,4 +20,11 @@ public class PaymentController
     {
         return "nacos registry, serverPort: "+ serverPort+"\t id"+id;
     }
+    @Value("${config.info}")
+    private String configInfo;
+    @GetMapping(value = "/config/info")
+    public String getConfig()
+    {
+        return configInfo;
+    }
 }
