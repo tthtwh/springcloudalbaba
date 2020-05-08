@@ -36,7 +36,7 @@
         <commons-codec-version>1.11</commons-codec-version>
         <commons-configuration-version>1.10</commons-configuration-version>
         <commons-bean-version>1.9.3</commons-bean-version>
-        <commons-compress-version>1.18</commons-compress-version>
+        <commons-compress-version>1.19</commons-compress-version>
         <httpcomponents-version>4.5.5</httpcomponents-version>
         <velocity.version>1.7</velocity.version>
         <retrofit2.version>2.4.0</retrofit2.version>
