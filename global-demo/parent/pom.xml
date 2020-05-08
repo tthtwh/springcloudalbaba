@@ -14,8 +14,10 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modules>
-        <module>../cloudalibaba9001</module>
+        <module>../cloud-alibaba9001</module>
         <module>../cloud-alibaba9002</module>
+        <module>../cloud-consumer-opengeign8000</module>
+        <module>../cloud-alibaba3337</module>
     </modules>
 
     <properties>
