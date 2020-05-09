@@ -1,0 +1,34 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-gateway
+  profiles:
+      active: dev # 表示开发环境
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true #开启从注册中心动态创建路由的功能，利用微服务名进行路由
+            routes:
+                - id: payment_routh #payment_route    #路由的ID，没有固定规则但要求唯一，建议配合服务名
+              #uri: http://localhost:8001          #匹配后提供服务的路由地址
+                  uri: lb://cloud-payment-service #匹配后提供服务的路由地址
+                  predicates:
+                    - Path=/payment/get/**         # 断言，路径相匹配的进行路由
+    nacos:
+      discovery:
+        server-addr:  ${spring.cloud.nacos.config.server-addr} #配置Nacos地址
+      config:
+        server-addr: localhost:8848 #配置Nacos地址
+        file-extension: yaml
+        group: ${spring.application.name}
+        namespace: b83990dd-7552-4d28-8ee4-e2440cf19bc9
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+
