@@ -27,4 +27,9 @@ public class PaymentController
     {
         return configInfo;
     }
+    @GetMapping(value = "/config/lib")
+    public String getLib()
+    {
+        return serverPort;
+    }
 }
