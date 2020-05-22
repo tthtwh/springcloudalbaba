@@ -23,6 +23,7 @@ public class PaymentController
     @GetMapping("/testA")
     public String testA()
     {
+        System.out.println(Thread.currentThread().getName());
         return "------testA";
     }
     @GetMapping("/testB")
